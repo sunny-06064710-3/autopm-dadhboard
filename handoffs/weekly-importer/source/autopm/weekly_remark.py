@@ -55,6 +55,34 @@ _LEGACY_DATE_LABEL = "周报日期: "
 # ------------------------------------------------------------------
 _DATE_RE = re.compile(r"^---\s+(\d{4}-\d{2}-\d{2})\s+---$")
 REMARK_FIELDS = frozenset({"current_progress"})
+_EMPTY_FENCE_LINE = re.compile(r"^\s*`{3,}\s*$")
+
+
+def strip_empty_fence_artifacts(value) -> str:
+    """Remove repeated empty Markdown fences appended to a remark.
+
+    Airtable legacy rich-text conversions can leave a trailing sequence such as
+    ``````, blank line, ``````.  Remove only a suffix containing at least two
+    fence-only lines.  A real fenced code block has content between its opening
+    and closing fences and is therefore preserved.
+    """
+    text = _text(value, allow_none=True)
+    lines = text.replace("\r\n", "\n").split("\n")
+    cursor = len(lines) - 1
+    fence_count = 0
+    while cursor >= 0:
+        line = lines[cursor]
+        if not line.strip():
+            cursor -= 1
+            continue
+        if _EMPTY_FENCE_LINE.fullmatch(line):
+            fence_count += 1
+            cursor -= 1
+            continue
+        break
+    if fence_count < 2:
+        return text
+    return "\n".join(lines[: cursor + 1]).rstrip("\n")
 
 
 def _marker_line(value):
@@ -217,7 +245,7 @@ def _read_legacy_blocks(text):
                 or not content.endswith(framing)
             ):
                 raise _broken()
-            content = content[: -len(framing)]
+            content = strip_empty_fence_artifacts(content[: -len(framing)])
             if content.strip():
                 block["fields"][key] = content
             pos = after_footer
@@ -241,7 +269,7 @@ def _read_new_blocks(text):
         while i < len(lines) and not _DATE_RE.match(lines[i]):
             content_lines.append(lines[i])
             i += 1
-        content = "\n".join(content_lines).rstrip("\n")
+        content = strip_empty_fence_artifacts("\n".join(content_lines).rstrip("\n"))
         blocks.append({"report_date": _report_date(report_date),
                        "fields": {"current_progress": content} if content else {}})
     return blocks
@@ -285,7 +313,7 @@ def merge_weekly_remark(existing, report_date, fields, *, rich_text=False) -> st
     Legacy blocks in existing text are preserved but new blocks use the new format.
     The rich_text parameter is accepted for API compatibility but ignored.
     """
-    text = _text(existing, allow_none=True)
+    text = strip_empty_fence_artifacts(_text(existing, allow_none=True))
     report_date = _report_date(report_date)
     if not isinstance(fields, Mapping):
         raise ValueError("周报字段必须是字典。")
@@ -294,7 +322,7 @@ def merge_weekly_remark(existing, report_date, fields, *, rich_text=False) -> st
     for key in REMARK_FIELDS:
         if key not in fields or fields[key] is None:
             continue
-        value = _text(fields[key])
+        value = strip_empty_fence_artifacts(_text(fields[key]))
         if _LEGACY_RESERVED_PATTERN.search(value):
             raise ValueError("周报内容包含保留的 AutoPM 周报标记，不能安全保存。")
         if any(_DATE_RE.fullmatch(line) for line in value.splitlines()):

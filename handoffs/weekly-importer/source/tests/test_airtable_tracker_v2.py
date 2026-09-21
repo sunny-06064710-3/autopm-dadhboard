@@ -72,6 +72,13 @@ class AirtableTrackerV2Tests(unittest.TestCase):
                 self.assertEqual(report['projects'], [])
                 self.assertTrue(any('读取时间不能作为周报日期' in w for w in report['warnings']))
 
+    def test_capture_date_fallback_removes_only_trailing_empty_fences(self):
+        self.project['fields'][self.remark_id] = 'Current progress\n\n```\n\n```\n\n```\n'
+        report = snapshot_to_report(
+            self.snapshot, self.config, identities={'recProject': 'AB-123'}
+        )
+        self.assertEqual(report['projects'][0]['fields']['current_progress'], 'Current progress')
+
     def test_corrupt_block_skips_project_including_unrelated_field_updates(self):
         self.project['fields'][self.remark_id] = self.remark().replace('2026-09-15','2026-02-30')
         self.project['fields']['fld_projects_project_name'] = 'Should not update'

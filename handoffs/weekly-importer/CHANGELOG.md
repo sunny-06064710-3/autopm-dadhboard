@@ -1,5 +1,12 @@
 # 更新日志
 
+## 2.4.0-rc6 — 2026-09-21
+
+- 按 All Tracker 模板的实际列号永久保护 P/Q/R；Airtable 导出、回写基线和旧基线回写均不再更新这三列。
+- 清理 Engineering Remark 末尾连续的空 Markdown 代码围栏（` ``` `）；真实含内容代码块保留。读取、导出和后续周报写入共用同一规则。
+- 真实文件重放：旧计划 426 个差异中移除 55 个 P 列差异，输出 371 个允许更新；P/Q/R 单元格 XML 与原文件 0 差异；40 条导出备注清除空围栏。
+- 完整 Python 回归 438 项通过；本次只交付源码和本地测试副本，未批量改写 Airtable 历史记录。
+
 ## 2.4.0-rc5 — 2026-09-21
 
 问题：Airtable 已读取成功后，本地 All Tracker 中的 Excel 纯时间值导致 `Object of type time is not JSON serializable`，无法生成预览和导出副本。

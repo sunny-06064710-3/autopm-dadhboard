@@ -11,6 +11,11 @@ from zipfile import ZipFile
 from .normalize import clean_text, normalize_header, normalize_project_id, parse_date
 from .workbook import WorkbookError, MAX_FILE_BYTES, MAX_UNCOMPRESSED_BYTES
 
+# The workbook itself marks P:R as immutable after project kick-off.  Keep this
+# rule positional because those three business columns are explicitly governed
+# by the template, even if somebody later changes their header wording.
+PROTECTED_TRACKER_COLUMNS = frozenset({16, 17, 18})
+
 HEADERS = {
     "project_id": ["Project Number", "Project ID", "Project ID (Manual)"],
     "project_name": [
@@ -374,6 +379,10 @@ def build_tracker_plan(path, reports):
                 return
             if key not in columns:
                 notes.append(f"{pid}：{key} 在总表无明确对应列，保留在解析记录。")
+                return
+            if columns[key] in PROTECTED_TRACKER_COLUMNS:
+                ref = f"{get_column_letter(columns[key])}{row}"
+                notes.append(f"{pid}：{ref} 位于受保护的 P/Q/R 列，保留总表原值。")
                 return
             if isinstance(value, (dict, list, bool)):
                 notes.append(f"{pid}：{key} 值类型无法直接写入，已跳过。")

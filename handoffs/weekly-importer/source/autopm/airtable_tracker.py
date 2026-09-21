@@ -13,7 +13,8 @@ from .normalize import clean_text, normalize_header, normalize_project_id, parse
 from .schema_memory import DEFAULT_FIELDS, LINKS, compatibility
 from .sync import _field, _get, _mapping, _task_scope
 from .tracker import TIMELINES, build_tracker_plan
-from .weekly_remark import read_weekly_remark, uses_weekly_remark, REMARK_FIELDS
+from .weekly_remark import (read_weekly_remark, strip_empty_fence_artifacts,
+                            uses_weekly_remark, REMARK_FIELDS)
 from .workbook import WorkbookError
 
 
@@ -222,7 +223,7 @@ def snapshot_to_report(snapshot, config, *, project_ids=None, identities=None):
                             "current_progress"
                         )
                         if date_basis == 'airtable_capture' and not current_progress:
-                            current_progress = raw_remark
+                            current_progress = strip_empty_fence_artifacts(raw_remark)
                         if _nonempty(current_progress):
                             project["fields"][key] = _scalar(current_progress)
                             project["field_sources"][key] = report_date_source

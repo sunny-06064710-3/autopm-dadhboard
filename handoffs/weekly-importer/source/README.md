@@ -1,6 +1,6 @@
 # AutoPM 源码版
 
-当前为 **2026-09-21 / 2.4.0-rc5 源码版**。本次修复 All Tracker 时间／时长单元格造成的 JSON 序列化失败，未构建或分发 EXE。变化及验证见 [更新日志](../CHANGELOG.md)。正常业务主线为：周报 → Airtable → All Tracker；All Tracker 回写用于复验与查漏。
+当前为 **2026-09-21 / 2.4.0-rc6 源码版**。本次锁死 All Tracker 的 P/Q/R 列，并清理 Engineering Remark 末尾重复的空代码围栏；未构建或分发 EXE。变化及验证见 [更新日志](../CHANGELOG.md)。正常业务主线为：周报 → Airtable → All Tracker；All Tracker 回写用于复验与查漏。
 
 最新确认：周报内容归属 Project，SKU 维度从 Airtable 开始维护。该业务调整尚未完成代码落地，当前测试通过不代表业务验收通过。
 

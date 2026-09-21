@@ -202,6 +202,28 @@ class TrackerRoundtripTests(unittest.TestCase):
         self.assertFalse(plan['blockers'], plan)
         self.assertEqual(plan['changes'], [])
 
+    def test_protected_p_q_r_columns_are_never_exported_or_bound(self):
+        self.snapshot['records']['tbl_tasks'].append({'id':'recKickOff','fields':{
+            'fld_tasks_name':'Kick Off','fld_tasks_project':['recProject'],
+            'fld_tasks_milestone':'Kick Off','fld_tasks_due_date':'2026-10-09'}})
+        wb = openpyxl.load_workbook(self.source); ws = wb.active
+        for col, heading, value in (
+            (16, 'Eng , OEM Kick Off', '2026-09-01'),
+            (17, 'Original TRA [at KO]', '2026-09-02'),
+            (18, 'Original MP Ready [at KO]', '2026-09-03'),
+        ):
+            ws.cell(2, col, heading); ws.cell(3, col, value)
+        wb.save(self.source); wb.close()
+        plan = export_plan(self.source, self.snapshot, self.config)
+        self.assertFalse(any(c['column'] in {'P', 'Q', 'R'} for c in plan['changes']))
+        self.assertFalse(any(b['semantic'] == 'kick_off_date' for b in plan['roundtrip']['bindings']))
+        self.assertTrue(any('受保护的 P/Q/R' in w for w in plan['warnings']))
+        export_tracker(plan, self.output)
+        self.edit('P3', '2026-10-10')
+        reverse = writeback_plan(self.output, self.snapshot, self.config)
+        self.assertFalse(reverse['changes'])
+
+
     def test_full_three_stage_chain_preserves_important_fields_and_is_repeatable(self):
         from test_rich_text_roundtrip import FormattingClient
         _, report = fixture()

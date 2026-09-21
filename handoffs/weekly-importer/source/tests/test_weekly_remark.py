@@ -2,7 +2,8 @@ import unittest
 from datetime import date
 
 from autopm.weekly_remark import (
-    MAX_REMARK_LENGTH, merge_weekly_remark, read_weekly_remark, uses_weekly_remark,
+    MAX_REMARK_LENGTH, merge_weekly_remark, read_weekly_remark,
+    strip_empty_fence_artifacts, uses_weekly_remark,
 )
 
 
@@ -13,6 +14,19 @@ def legacy(day, progress):
             '\n[[AUTOPM_WEEKLY_REPORT:END_PROGRESS]]\n[[/AUTOPM_WEEKLY_REPORT]]')
 
 class WeeklyRemarkTests(unittest.TestCase):
+    def test_repeated_trailing_empty_fences_are_removed_without_touching_real_code(self):
+        self.assertEqual(strip_empty_fence_artifacts('Progress\n\n```\n\n```\n\n```\n'), 'Progress')
+        self.assertEqual(strip_empty_fence_artifacts('```\n\n```'), '')
+        real_code = 'Progress\n```\n3. literal\n```'
+        self.assertEqual(strip_empty_fence_artifacts(real_code), real_code)
+        self.assertEqual(strip_empty_fence_artifacts('Progress\n```'), 'Progress\n```')
+        parsed = read_weekly_remark('--- 2026-09-21 ---\nProgress\n\n```\n\n```')
+        self.assertEqual(parsed['fields']['current_progress'], 'Progress')
+        merged = merge_weekly_remark('Manual note\n\n```\n\n```', '2026-09-21',
+                                     {'current_progress': 'Progress'})
+        self.assertNotIn('```', merged)
+        self.assertTrue(merged.startswith('Manual note\n\n--- 2026-09-21 ---'))
+
     def test_storage_mode_is_explicit_and_base_scoped(self):
         self.assertFalse(uses_weekly_remark({}))
         self.assertFalse(uses_weekly_remark({"project_report_storage": True}))

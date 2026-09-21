@@ -9,7 +9,8 @@ from .normalize import normalize_header, normalize_project_id, parse_date
 from .schema_memory import DEFAULT_FIELDS
 from .sync import (_field, _get, _mapping, _coerce, _equivalent, _resolve_factory,
                    _resolve_people, _finish_plan, DEPARTMENTS, WRITABLE)
-from .tracker import HEADERS, TIMELINES, read_tracker, build_tracker_plan, fingerprint
+from .tracker import (HEADERS, TIMELINES, PROTECTED_TRACKER_COLUMNS, read_tracker,
+                      build_tracker_plan, fingerprint)
 from .weekly_remark import uses_weekly_remark, read_weekly_remark, merge_weekly_remark
 from .workbook import WorkbookError
 
@@ -102,6 +103,8 @@ def export_plan(path, snapshot, config, *, project_ids=None):
         for key, col in cols.items():
             if key in {'project_id', 'project_number', 'sku', 'factory', 'report_date'}:
                 continue
+            if col in PROTECTED_TRACKER_COLUMNS:
+                continue
             ref = f'{get_column_letter(col)}{row}'
             if ref in tracker['formulas']:
                 continue
@@ -176,6 +179,11 @@ def writeback_plan(path, snapshot, config):
             col = cols.get(key)
             if col is None:
                 continue  # Removing a column is not deleting cloud data.
+            if col in PROTECTED_TRACKER_COLUMNS:
+                plan['warnings'].append(
+                    f'{pid} / {binding.get("header", key)}：P/Q/R 为受保护列，未生成回写。'
+                )
+                continue
             from openpyxl.utils import get_column_letter
             ref = f'{get_column_letter(col)}{verified_rows[unit]}'
             after = cell_value(tracker, verified_rows[unit], col)
