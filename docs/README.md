@@ -1,14 +1,15 @@
-# AutoPM 文档索引
+# 文档索引
 
-现行执行规范：[根 AGENTS](../AGENTS.md)。当前业务决定：[协作入口](../collaboration/README.md)。
+从[项目首页](../README.md)开始；任务状态只读原GitHub Issue。旧资料不覆盖新决定。
 
-| 阅读目的 | 入口 | 性质 |
+| 层级 | 入口 | 使用方法 |
 |---|---|---|
-| 9/18–9/21 Airtable 自动化成果 | [阶段进展](../collaboration/current/airtable-automation-progress-2026-09-21.md) | 当前实施、验证边界与下一步 |
-| 任务与分工 | [指南](../collaboration/使用分工指南.md) | 当前流程，状态读Issue |
-| 9/14界面交接 | [交接](../collaboration/current/interface-handoff.md) | 有日期的现场记录，后续变更需再核验 |
-| 市场增量脚本 | [实施状态](../collaboration/current/program-markets/IMPLEMENTATION-STATUS.md) | 离线验证，未据此认定已部署 |
-| 9/13字段评估 | [评估入口](../collaboration/review-2026-09-13/README.md) | 历史快照与证据 |
-| 9/11规划和任务卡 | [规划](../collaboration/planning/README.md) | 冻结规划基线，非当前状态来源 |
-| 原资料在哪、缺什么 | [依赖登记](DEPENDENCIES.md) / [搬移对照](archive/MOVES-20260915.json) | 不把未收录资料当丢失 |
-| 早期产品与供应商资料 | [归档](archive/README.md) | 历史参考，非执行输入默认集 |
+| 交付导航 | [行动页](delivery/README.md)、[发现清单](delivery/findings.md)、[架构说明](delivery/architecture.md) | 业务看行动，AI按编号查证 |
+| 审计基线 | [9/23覆盖与证据](delivery/evidence.md) | 历史事实与未验范围，不是实时监控 |
+| 协作规则 | [根规则](../AGENTS.md)、[协作入口](../collaboration/README.md) | 唯一规则及任务链接 |
+| 近期实施证据 | [9/21自动化进展](../collaboration/current/airtable-automation-progress-2026-09-21.md)、[市场脚本](../collaboration/current/program-markets/IMPLEMENTATION-STATUS.md)、[界面交接](../collaboration/current/interface-handoff.md) | 按原日期和验收边界使用 |
+| 待审迁移 | [微软资料](../collaboration/current/microsoft/README.md)及[PR导航](../collaboration/README.md) | 输入保留，未部署不冒称完成 |
+| 历史参考 | [9/13评估](../collaboration/review-2026-09-13/README.md)、[9/11规划](../collaboration/planning/README.md)、[更早归档](archive/README.md) | 按需查，不默认全读入AI |
+| 来源与清理 | [旧引用缺口](DEPENDENCIES.md)、[本次清理](delivery/cleanup.md) | 缺失、删除及恢复依据 |
+
+不再建立另一份总台账或最新入口。新增成果回原Issue和对应日期批次，本页只补必要导航。

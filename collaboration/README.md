@@ -1,39 +1,31 @@
-# AutoPM 管理入口
+# 协作入口
 
-Codex 负责主维护、计划、Issue 发布、分派、审核和集成。执行 AI 按指定任务工作。
+项目唯一入口为[根首页](../README.md)。本页只维护约定和导航；当前状态读[总协调#1](https://github.com/sunny-06064710-3/autopm-dadhboard/issues/1)及原Issue，完整规则仅维护[根AGENTS](../AGENTS.md)。
 
-- [使用分工指南](使用分工指南.md)
-- [协作总 Issue #1](https://github.com/sunny-06064710-3/autopm-dadhboard/issues/1)
-- [全部开发任务](https://github.com/sunny-06064710-3/autopm-dadhboard/issues)
-- [任务编号与 GitHub 链接](issue-map.json)
-- [DuMate 入口](team/dumate/README.md) / [Qoder 入口](team/qoder/README.md)
-- [AI-03](team/ai-03/README.md) / [AI-04](team/ai-04/README.md)：产品身份待明确，浏览器/API 为用户报告已配置，尚未独立验收。
+## 从哪里接续
 
-## 当前业务决定
+- Airtable交付：[行动页](../docs/delivery/README.md) → [#50治理](https://github.com/sunny-06064710-3/autopm-dadhboard/issues/50)及对应原Issue。发现问题没有自动授权修复。
+- 角色分工：[使用分工指南](使用分工指南.md)。Codex管理审核和集成，用户不做消息中转。
+- 旧任务编号：[导航映射](issue-map.json)。body_file仅指历史草稿，不是当前Issue正文。
+- 交付：team/角色/outbox/任务ID/result.md，沿用[模板](planning/templates/DELIVERY.md)，回链原Issue及PR。
 
-1. 9/13评估覆盖16表424字段，是历史快照；9/11的18表499字段也是历史范围，不能表示当前线上实测。
-2. 保留现有Task完成机制，暂停项目进度改造。AT-01等旧任务标为Deferred，不能直接实施。
-3. Task承载项目计划；业务Issue及其措施承载异常处理；GitHub Issues承载AutoPM开发工作。
-4. 根据保存的交接证据，现有Program市场清单已发布；报告、部门和知识库有未验收草稿；新增Program补市场脚本有离线测试但尚未线上启用。
-5. Power Apps保留既有MVP与双路线规划；本次管理设置不授权全面迁移、停用Airtable或生产发布。
+## 仍有效的约定
 
-## 资料与状态
+1. Tasks承载计划；业务Issues及措施承载异常；GitHub Issues承载开发，三者不自动复制。
+2. 保留现有Task完成机制，旧进度改造#4仍暂停；修复当前结果与改变业务口径须分开确认。
+3. 业务规则维护在配置表；缺Owner只警告不阻止创建；重跑补缺并保护人工值。日期/Owner规则沿用原Issue最新批准约定。
+4. P01与L系列沿用原Issue专属维护责任，不能多AI争写同一对象。
+5. Power Apps目标为业务功能等效；MVP/方案不证明租户、许可、Dataverse、部署和访问已验收，不能自行替换Airtable生产。
+6. 旧文件均按取证日期理解，新事实需要新证据。角色标签、Ready、任务卡不等于AI已启动；没有已验证的自动唤醒连接。
 
-`planning/`保留33个历史工作包、蓝图、验收用例和模板。`review-2026-09-13/`保留业务适用性评估及证据；`current/`保留后续界面交接和市场脚本。冲突以用户最新决定和协调方Issue中的明确范围为准。
+## 保留的待审工作
 
-Issues用Backlog、Ready、Blocked、Deferred、In progress、In review、Accepted标签表示状态。没有明确执行者与派工评论，Ready也不代表AI已经启动。执行者在Issue中接收并提交结果，Codex检查后更新状态。
+下表仅导航，实时状态读PR；本次整理不接受其业务结果。
 
-现有PAT已通过仓库访问；创建GitHub Projects返回`Resource not accessible by personal access token`。当前使用Issues和标签管理，看板单独列为权限阻塞，不阻塞执行。
-
-DuMate本地文件交接产物已核验。Qoder在另一台机器，必须使用GitHub。没有已验证的自动唤醒连接，不声称各AI持续后台运行。
-
-## 2026-09-15 管理规则生效入口
-
-统一规范：[根AGENTS](../AGENTS.md)。先列计划取得用户确认，再执行；日志、实际变更、检查结果交回原Issue，Codex验收。当前执行状态只保存在GitHub Issue；issue-map/onboarding-map仅导航，planning/triage均为历史记录。
-
-资料分类见 [文档索引](../docs/README.md)。历史资料已归档；失效的历史引用逐项见 [依赖登记](../docs/DEPENDENCIES.md)，不要让远程AI读取Windows盘符。
-
-## Power Apps 复刻派工修订（2026-09-15）
-
-用户已明确授权Qoder按业务功能等效目标推进首轮：MS-00只读环境核实、MS-01离线复用。微软许可与部署仍需证据；保留既有Task完成机制、暂停项目进度改造，生产切换不在本轮。
-统一入口为 [微软任务书](planning/dispatch/START_MICROSOFT.md)；后续MS任务沿用原Issue及依赖，未来增强保持待办。Qoder经GitHub取得输入与提交结果，不依赖协调方本机路径。
+| 工作 | 入口 | 边界 |
+|---|---|---|
+| 统一管理与交付入口 | [PR #44](https://github.com/sunny-06064710-3/autopm-dadhboard/pull/44) | 合并前用管理分支文档；合并后main为正式入口 |
+| Qoder接入 | [#42](https://github.com/sunny-06064710-3/autopm-dadhboard/issues/42) / [PR #45](https://github.com/sunny-06064710-3/autopm-dadhboard/pull/45) | 保留输入及回执，不代验收 |
+| 微软环境与Bridge契约 | [PR #46](https://github.com/sunny-06064710-3/autopm-dadhboard/pull/46) / [PR #47](https://github.com/sunny-06064710-3/autopm-dadhboard/pull/47) | 保留current/microsoft与派工；基线变化后同步并重验 |
+| 本地演示 | [PR #49](https://github.com/sunny-06064710-3/autopm-dadhboard/pull/49) | 演示不是生产交付 |
+| 导入保护与使用说明 | [PR #51](https://github.com/sunny-06064710-3/autopm-dadhboard/pull/51) | 依赖独立importer分支，未并入本次变更 |

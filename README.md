@@ -1,27 +1,30 @@
-# AutoPM
+# AutoPM · 唯一交付与协作入口
 
-AutoPM 项目资料、应用代码和多 AI 协作仓库。Codex 负责主维护、任务统筹、审核和集成；执行 AI 按用户确认的范围交付。
+**业务负责人先看：[接下来做什么、谁来做、做到什么算完成](docs/delivery/README.md)。**
 
-## 从这里开始
+2026-09-23审计已完成；数据、自动化和界面存在待处理问题，普通用户全路径验收尚未完成。当前交付物是审计和整改依据，不能当作零缺陷上线证明。当前状态和批准范围统一读[总协调 Issue #1](https://github.com/sunny-06064710-3/autopm-dadhboard/issues/1)。
 
-1. 所有 AI 必读 [AGENTS.md](AGENTS.md)。
-2. 查看 [当前业务决定与团队入口](collaboration/README.md)、[使用分工指南](collaboration/使用分工指南.md)。
-3. 从 [总协调 Issue #1](https://github.com/sunny-06064710-3/autopm-dadhboard/issues/1) 获取有效分支和任务；未确认前只整理计划。
-
-过渡期：本规范位于 `codex/autopm-management-20260914`，通过 [PR #44](https://github.com/sunny-06064710-3/autopm-dadhboard/pull/44) 集成。合并前不能假定 main 已包含这些文件；后续基准分支以总协调 Issue 为准。
-
-## 目录与事实来源
-
-| 位置 | 用途 |
+| 我现在要做什么 | 去哪里 |
 |---|---|
-| `backend/` | 当前服务代码；部署配置见 `render.yaml` |
-| `backend/frontend/` | 当前服务实际挂载的前端目录 |
-| `frontend/`、`backend/static/` | 历史/其他候选前端，未确认用途前不要作为当前修改入口 |
-| [docs](docs/README.md) | 文档索引、来源边界、历史归档 |
-| [collaboration](collaboration/README.md) | 当前决定、分工和交付模板 |
-| `collaboration/team/<角色>/outbox/<任务ID>/` | 一项任务的确认记录、结果、测试与变更日志 |
-| GitHub Issues / PRs | 当前任务状态 / 实际变更和审查证据 |
+| 看重点、决定首批范围 | [交付行动页：6个工作包](docs/delivery/README.md) |
+| 查问题、修复和验收办法 | [审计发现与受限证据索引](docs/delivery/findings.md) |
+| 理解系统及接手维护 | [架构、数据流与使用说明](docs/delivery/architecture.md) |
+| 查已检查/没检查的范围和底稿 | [审计证据与复用边界](docs/delivery/evidence.md) |
+| 让AI领取或交回工作 | [统一规则](AGENTS.md) → [协作入口](collaboration/README.md) → 原Issue |
+| 查代码变更、待审交付 | [Pull requests](https://github.com/sunny-06064710-3/autopm-dadhboard/pulls) |
+| 查旧资料及本次清理 | [文档索引](docs/README.md) / [清理记录](docs/delivery/cleanup.md) |
 
-`backend/main.py` 使用 `backend/frontend/`；`render.yaml` 从 backend 启动服务。这里是代码配置判断，不代表线上部署已验收。历史页面、bak及辅助脚本暂留原位，改动前须检查消费者。
+## 以后只按这个方式维护
 
-根目录不存临时文件、个人记忆或重复任务台账。历史资料不构成执行授权，入口见 [归档说明](docs/archive/README.md)。
+**首页导航；Issue管当前任务状态；PR管变更和审查；带日期的证据管验收。** 本地指南、历史任务卡、聊天记录不再维护第二套状态。完成一个阶段时回写原Issue，更新这里链接的现有文档，不再新建另一个“总入口”。
+
+修复只复读受影响对象及下游，复用审计规则；正式上线前仍全量程序回归。历史计数不是实时数据。提交或合并成功不能自动标记业务完成。
+
+## 仓库边界
+
+- `backend/`及其`frontend/`为现有演示源码，`render.yaml`指向backend；源码存在不证明部署、Airtable或Power Apps已验收。
+- `frontend/`、`backend/static/`和版本页面用途尚待确认，本次保留，不作为默认修改入口。
+- `collaboration/current/`及各AI的`inbox/outbox`保留输入与交付；`planning/`、`issues/`是历史快照，状态只读Issue。
+- 仓库当前公开。本次审计摘要不含原始业务记录；完整包见[受限证据说明](docs/delivery/evidence.md)。删除当前文件不会删除Git历史，本次没有完成历史隐私清除。
+
+**发布过渡：** 本首页随[PR #44](https://github.com/sunny-06064710-3/autopm-dadhboard/pull/44)更新，合并前用该PR的Files changed查看，main可能仍显示旧说明。合并后仓库默认首页即日常唯一入口。其他未合并PR仍需独立验收。
