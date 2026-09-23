@@ -1,5 +1,5 @@
 # AutoPM 交付入口
 
-从[交付行动页](docs/delivery/README.md)查看本期范围、原任务、验收要求和资料索引。当前执行状态以对应 GitHub Issue 为准；带日期的审计和历史材料只作证据，不代表已经修复或验收。
+阅读顺序：[了解系统](docs/delivery/architecture.md) → [看当前问题与交付行动](docs/delivery/README.md) → [找证据](docs/delivery/evidence.md)与[统一规则](AGENTS.md)。交付行动页是本期状态摘要；实时执行进度以对应 GitHub Issue 为准。
 
-执行 AI 先读[统一规则](AGENTS.md)。管理资料由[PR #44](https://github.com/sunny-06064710-3/autopm-dadhboard/pull/44)交付；合并前以 PR 的当前分支为准，不能假定 main 已更新。
+执行 AI 须读统一规则及原 Issue。管理资料由[PR #44](https://github.com/sunny-06064710-3/autopm-dadhboard/pull/44)交付；合并前以 PR 的当前分支为准，不能假定 main 已更新。
