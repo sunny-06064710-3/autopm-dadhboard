@@ -13,6 +13,14 @@
                                       <- 人工审核后的有限回写
 ```
 
+## 2026-09-23 使用说明与保护规则
+
+- [用户说明：周报能改什么、不能随意改什么](docs/IMPORTER_USER_GUIDE.md)
+- [协作保护契约](COLLABORATION_CONTRACT.md)
+- [双层保护与变更操作规程](docs/IMPORTER_SAFETY_OPERATIONS.md)
+
+这些新增说明适用本机 rc5。本次没有升级本目录历史源码、发布新 EXE 或合并正式分支；下面的 rc6 源码版本信息仍描述历史交接包。
+
 ## 当前状态
 
 - 当前源码版本：`2.4.0-rc6`，版本真源见 [`source/autopm/__init__.py`](source/autopm/__init__.py)。

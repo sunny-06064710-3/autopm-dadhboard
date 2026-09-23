@@ -1,0 +1,14 @@
+{
+  "purpose": "Documentation implementation reference; not a runtime release",
+  "version": "2.5.0-rc5",
+  "files": {
+    "identity.py": "1d45273117e0ef02b63a969aae7c6b9b4247e8b25ebce21b3bc427bb6a01c83f",
+    "normalize.py": "8e99216f4a967e2644ace802effd302e775b136d200df1167ff733f513b4a097",
+    "schema_memory.py": "0325110b4b161a5303d1445088b507caa07d0cff837f45bad5d4a864e179e842",
+    "sync.py": "817aad9e4b495366b605d86e2cc79529c93ad542b0a2b67268b59c6b4aaeb72c",
+    "tracker_roundtrip.py": "402dfc412b3efcef588d4a7b376dcc421341af2bbd8d4514a9f24f475cb7c98e",
+    "weekly_remark.py": "f960210d2c3a4bd76de510c72cb8a397ddb69423ec3e562d43ff980026627b9e",
+    "workbook.py": "8419f5486c82c642e154c0827b5eb71a3c56cbf917ccdfe4b787012ed4116dd6",
+    "__init__.py": "a00c7a5eb5183ca2ce055865ac0d861db8cd0fd09cebd15d52b9b2eb9ec1c646"
+  }
+}
