@@ -1,0 +1,382 @@
+{
+  "date": "2026-09-23",
+  "base_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b",
+  "removed_files": [
+    {
+      "path": "backend/frontend/_l4_old.txt",
+      "sha256": "b0a9df5c0fba05e16b0c4773f15d31dde9e1186d0ae3a5305acb44c5d99affd2",
+      "git_blob": "eeb2c2f17a03c2850834d8503a3ac12b14dcda99",
+      "bytes": 4812,
+      "reason": "development-scratch-or-backup",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "backend/frontend/_new_l4.txt",
+      "sha256": "0d3f6cdc6adf49d86ebb6cc699254c2dfe9835ab32fba24fcb31373a3c1a0890",
+      "git_blob": "e4e2671fe773ab155f3f4476933823b643b0520e",
+      "bytes": 10290,
+      "reason": "development-scratch-or-backup",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "backend/frontend/_repl.ps1",
+      "sha256": "8529e2be24b435085bf6bad8a02764a62c208a8692cff88e41a850e86a5a962e",
+      "git_blob": "69e0db6ca66f7a7deee04e2929e23440f78b7073",
+      "bytes": 526,
+      "reason": "development-scratch-or-backup",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "backend/frontend/_replace.ps1",
+      "sha256": "32f59c991eee71f59ba3306ade474536d3f523c67271a48b380ee3583a02e43b",
+      "git_blob": "f15d3a2830aadfb62d17477f1e37241f8b0ac181",
+      "bytes": 436,
+      "reason": "development-scratch-or-backup",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "backend/frontend/_test.txt",
+      "sha256": "79619b94f45940da806418927f29e0fb96dc143c3d6cfa3ad4b198d14782337b",
+      "git_blob": "81bb7887eba8098e103456fb508f1f9b2117a1d1",
+      "bytes": 711,
+      "reason": "development-scratch-or-backup",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "backend/frontend/index.html.clean-bak",
+      "sha256": "73731d001f47eac467caaeb0de1bf0b162c05e4c4f6b263589d90f9c8f6e3a5d",
+      "git_blob": "950be3f73b7ef4a476e66a6939a50eb5f5aa61c6",
+      "bytes": 793394,
+      "reason": "development-scratch-or-backup",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "backend/frontend/index.html.v15.bak",
+      "sha256": "32aa5aa451b884c744b8237abd3483af78a667454867cf9a5a089397d17f637d",
+      "git_blob": "99ab64a447cf392b502dbec7f5f127d3ca78af8c",
+      "bytes": 648717,
+      "reason": "development-scratch-or-backup",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "backend/frontend/index.html.v16.3.bak",
+      "sha256": "73731d001f47eac467caaeb0de1bf0b162c05e4c4f6b263589d90f9c8f6e3a5d",
+      "git_blob": "078824465ec62fc4e2ec4ef09967e2b1df335f8d",
+      "bytes": 793394,
+      "reason": "development-scratch-or-backup",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "backend/frontend/index.html.v16.bak",
+      "sha256": "e8375d00d5b4c5cf74978a7547f41062741beb7fec9be5b998ddd5a358584792",
+      "git_blob": "d08a119724a361ae19bc8b73e1612d549b79ce83",
+      "bytes": 812601,
+      "reason": "development-scratch-or-backup",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "collaboration/github-status.json",
+      "sha256": "b7b9b393ad3ba08bb8f3b4aa8aae061dbeb0e7c189fbcbdf71c1b3f6a6bc2b47",
+      "git_blob": "86d9b5bdc1b8619a34562c13d64f1cce25385d7e",
+      "bytes": 292,
+      "reason": "obsolete-navigation",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/debug-snippets/_content_area.txt",
+      "sha256": "7a65225d2158f8ea79bab8de140b4d3e9441611c29f1c1c2e13d050f44f287ee",
+      "git_blob": "1aa32c2b6d872cc5f436dbc3ac2c5d619a0c447c",
+      "bytes": 519,
+      "reason": "development-scratch-or-backup",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/debug-snippets/_core_check.txt",
+      "sha256": "a94e4b5c7f2ed57c9dfc0a8cd17b23a5f314cb0c4cb5d127cb70418c8f2985f6",
+      "git_blob": "c042403f9e3199762900992c54fde4e4cbfad241",
+      "bytes": 503,
+      "reason": "development-scratch-or-backup",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/debug-snippets/_core_container.txt",
+      "sha256": "dd44397715eb3d225a75c37651431961e31f6dc2fc82767352187a20dfce49e5",
+      "git_blob": "f424446af1156ecda5eb27768c41f9d05ec6d54e",
+      "bytes": 530,
+      "reason": "development-scratch-or-backup",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/debug-snippets/_deployed_analysis.txt",
+      "sha256": "858a4a0de0ed72a8496caf225bd0b0f7e1f8fcf1badabf1eb3e3f6f967e451aa",
+      "git_blob": "723187ed47448e4ffbe46b8bd39fdc17f00bc9cf",
+      "bytes": 5861,
+      "reason": "development-scratch-or-backup",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/debug-snippets/_modal_check.txt",
+      "sha256": "2b88f3110796ee7361e63803fe06ffb1aa233583791b0f4ecc637dea2df2979d",
+      "git_blob": "5229ea18f9289f623636a3286120a0f83b0754bf",
+      "bytes": 358,
+      "reason": "development-scratch-or-backup",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/debug-snippets/_v16_css.txt",
+      "sha256": "098669c4640a0b19a71f842a5c97f792196bbb5be3e426478e5433e3292a5a9b",
+      "git_blob": "346efdb7e52e9a75624972cff7a22b88634adb66",
+      "bytes": 524,
+      "reason": "development-scratch-or-backup",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/AutoPM_FULL_CONTEXT.md",
+      "sha256": "eea2bda6d12bf980a786d1740ceecf15e31f5676e5fbe4263121c70de876cafd",
+      "git_blob": "46ec3e0dc2e10f1a00f2f10bd19e59858f7840d0",
+      "bytes": 6951,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/decision/AI+制造业副业方向.md",
+      "sha256": "705e5690c457c1ba440df28cf1eb6886f5aeff1d656a83421a9053ea29c75ebf",
+      "git_blob": "382f42d2feae73828ab111d0df79072ba1b1cd48",
+      "bytes": 1183,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/decision/Agileex主路线判断.md",
+      "sha256": "e293a40bd899fac0da06a1dedc0ac74d6df589e082b2e73c847333463d73e6e7",
+      "git_blob": "96fc67735dead7375033b830150dbf54c187a27d",
+      "bytes": 1394,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/decision/AutoPM_PDF自动解析.md",
+      "sha256": "2cfda419d77a3b5a7adb1d9a1a22a285c5f81d3b9a97a3fcce03b75e57d40df2",
+      "git_blob": "7a3fd23872e2cc22c70bc3a8e9d462ea9e5e07c8",
+      "bytes": 1192,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/decision/AutoPM_v18.0_Bug分析.md",
+      "sha256": "8e9d5af879819a7e61db798a11a5c1676a222327109e73365dca1daa664f53a2",
+      "git_blob": "6cd4c91f1e791e419a251ada6849665a989ab5a0",
+      "bytes": 1059,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/decision/AutoPM使用技巧.md",
+      "sha256": "b918253cceac348f7dd77dedf8954b2f070b0de910758a79e61c626b5c4ed2ee",
+      "git_blob": "24cda83a0e8effa2d16262f29b4de4164578f2af",
+      "bytes": 637,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/decision/NPI部署平台转向Coze.md",
+      "sha256": "cbbc56b2fb016bafbfe9054b6b9780db04ef099433a74ce7705d8e8ca5674cda",
+      "git_blob": "47d01cce7739b8aee59dae4d49563e24ac63db4f",
+      "bytes": 1345,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/decision/Ody_vs_Agileex供应商策略.md",
+      "sha256": "956f5ea80dc2f1131ac18bc3997c3f148ff606e42f6251c9c0f6f86e36745f28",
+      "git_blob": "5cc7409c99f817787cc3291a8a678c8005664e37",
+      "bytes": 3640,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/decision/Rodyr公司综合评估.md",
+      "sha256": "fdc2ec4164f651d28f0aa1f0d3d5014c4a7e15bbba6da3b6c9b4cddee05c30ae",
+      "git_blob": "12a63830af36f3fe58671c18c30cf7e967661355",
+      "bytes": 595,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/decision/Rodyr提案审查.md",
+      "sha256": "983aa08aaaba6112208cbd0bfea436b16c7778088635a2add92e366cfaafca36",
+      "git_blob": "b7a9984870bc7ef3b4bfc9ace14fdfca8301ff62",
+      "bytes": 2183,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/decision/agent-browser高级使用技巧.md",
+      "sha256": "2f6a2536666a48b1581bc2628160397b408f592ae54ac408b07323044aa2d89a",
+      "git_blob": "68c7f2935bf81bb0396272d7b1745584ccbcacb6",
+      "bytes": 988,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/decision/bash命令技巧.md",
+      "sha256": "67055eb1b153479bb76d3d57035f37bb4bd620b42e7a67e073ee0a5a6e080ee1",
+      "git_blob": "5935071db9b3044a8698a4ce3e5a491d23d058c7",
+      "bytes": 220,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/decision/输出质量失败与整改机制.md",
+      "sha256": "7c0797e755ffa01369ea9c18610b87763dda07d14bfc80729c44c62a3351cc7d",
+      "git_blob": "4dbce553091bd0f582f248733f79f05d6283c451",
+      "bytes": 2375,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/index.json",
+      "sha256": "bb6ca5009ec54b197e5fb2da69653486a33bedd3b1efd76400d303e2b93c1e4a",
+      "git_blob": "2662686f350c2e4836573ca776d60bcae315748c",
+      "bytes": 16119,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/project/Agileex调研报告.md",
+      "sha256": "25f6a56ec49eca4c6a7bd3b4527db7eb99be3b84e736e01995733bed14e6e234",
+      "git_blob": "bf0f616822f5d72828b64de89412c020afeaa45c",
+      "bytes": 4853,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/project/AutoPM Phase 1计划.md",
+      "sha256": "0d08c837edb21f7a0589c97e70cc7c00e0f44998b00219ec51f069486c158edf",
+      "git_blob": "38511bbdf0d2eabf1aa6df678545d0f9d65895c4",
+      "bytes": 1824,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/project/AutoPM_改革.md",
+      "sha256": "6f5c3a225b71361a2dc1998f3f4cdc67fa420b3a2c52ec8f81790c44235454b8",
+      "git_blob": "29b571342b92fc9e0e53d910987ec91b4986a296",
+      "bytes": 4046,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/project/AutoPM战略调整.md",
+      "sha256": "141117f585383b88092cddb77eff7b3c1350a68299cbfac26fe9f6f0554efdf4",
+      "git_blob": "973091c323a33a85b1eae8c748764b35fe26a0cc",
+      "bytes": 1013,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/project/AutoPM新项目录入.md",
+      "sha256": "77f13961def356f61013873b2b6cb4e6e1e75813fb26dec07bce822131924bf2",
+      "git_blob": "69a30cb25648e3d796c0758a79f3f86da413b3e7",
+      "bytes": 894,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/project/MEM论文_V3修订.md",
+      "sha256": "8b442b761817ef04047335f84f67cdd66d9c819de02fe0278ad6aff161e9bcf3",
+      "git_blob": "4d275d845657180a134566b0ac167dd71870aa45",
+      "bytes": 10284,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/project/NPI流程AI助手.md",
+      "sha256": "a3c504c32acb980e5e0fa5b8a6e9caf1dff8ec3965354926f006a84178429034",
+      "git_blob": "2d36931994f1681238701a1dd1d22161a76edb62",
+      "bytes": 1476,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/project/下周二Jen汇报计划.md",
+      "sha256": "bbaba750fa8396940a92e848e28d266dd9dde3892989c22a44c3c04cb18fecea",
+      "git_blob": "fecfadec5df83c4cb81a1fe66ce454a2812726cf",
+      "bytes": 248,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/project/书籍解读与音频.md",
+      "sha256": "0f98c8f3d1e5b884a07bdd6ab659288a1d2caed5b0852e24f57557c861796fbf",
+      "git_blob": "946865473cb673828d7027b8d155da473854fcd3",
+      "bytes": 1479,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/project/微软Windows11_AI操作系统电子书.md",
+      "sha256": "54bee276144ac9d554ddea4958bc573866f05b3ed2a643574b42ce539c86ed62",
+      "git_blob": "b67f6e34eb2d5aba2f235b174acbbb784968f262",
+      "bytes": 566,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/project/神州数码原力企业虾AI智能体活动.md",
+      "sha256": "e6bb29fad3fdf440da6f98722f5139670f96332c9a251f71a9652d8a085f83a9",
+      "git_blob": "a9a9f720e3e0dc83d4e6acb45044b90453985308",
+      "bytes": 691,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/project/网易智企帝王蟹AI员工平台.md",
+      "sha256": "a3e2fa2f1ee61d78e6dbe21c549592b2c8eac3b13a1940cc16d173af1cc3f719",
+      "git_blob": "95368cc8b5a01b47ba371a9bd8bf33e6610f72e4",
+      "bytes": 3382,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/project/詹姆斯·沃森播客素材研究笔记.md",
+      "sha256": "fbddb443b4ece11ffdaa52146e62fc1103a6846c92f55a56126a1f62fbd43401",
+      "git_blob": "0bef07d1b34d2fcc2247556c84aabd96da2b5bd0",
+      "bytes": 6469,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/project/链条15-哲学家的追问.md",
+      "sha256": "86e04ac5ba5162893c9db1b6867b1e574f06b5c08a3ba62c43681efce91feb99",
+      "git_blob": "f2fd9d30366a96b07aaefc25fdee959507209854",
+      "bytes": 2634,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/project/链条18+19_10人推送计划.md",
+      "sha256": "eca9a55d0e6384ddca21fb903d47514436125e92441b2bf315732b685bda868e",
+      "git_blob": "99ca7b2c8f1a58a99706e7d5d423c7cca46f04f4",
+      "bytes": 2494,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/project/链条8-探索生命之谜.md",
+      "sha256": "a43a1759c4992229063256989827407f8af8e2e4c8c8a36f9dc1b557fc0ede60",
+      "git_blob": "23683d6ee0f5a59fdfca86e02b53703972c4d83d",
+      "bytes": 1421,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    },
+    {
+      "path": "docs/archive/legacy-context/recent_memory/todo/AutoPM待办清单.md",
+      "sha256": "fdb74efce440f0c9dc1b76e3fa7e5e7d5e455d1342b8599b2af3e14ba62d4b9e",
+      "git_blob": "1336878bbc5a446f75a0149a2ec3d225b9f78a19",
+      "bytes": 1645,
+      "reason": "personal-mixed-history",
+      "recover_from_commit": "29eead8b3fc1063fafd01ac3739ce5a76e2d142b"
+    }
+  ]
+}

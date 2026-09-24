@@ -1,0 +1,124 @@
+{
+  "snapshot_date": "2026-09-23",
+  "package": "delivery-audit-2026-09-23",
+  "raw_evidence_uploaded": false,
+  "full_manifest_sha256": "00e75350e0cd8bcd05164308f84a48ae78f430bdb273638eb42c88ea3f88e1eb",
+  "scope": "Report and check-source hashes only; full manifest and raw evidence retained privately. This is artifact integrity, not business acceptance.",
+  "files": [
+    {
+      "path": "checks/automation-extract.py",
+      "sha256": "22ec2e5ede9db5d3f073e41b1548a9f29558d2787b300b2e9f4f3b952843c558",
+      "bytes": 7141
+    },
+    {
+      "path": "checks/automation-review.cjs",
+      "sha256": "bb13bd120ddc4ca37f49fbfd6252435cc113b4e31f9af8d4ce125824e23cd57d",
+      "bytes": 7012
+    },
+    {
+      "path": "checks/build_data_report.py",
+      "sha256": "9b72f78e76604ef908860e1dd96bdfd5a4dfc42b8153e7242eb5122a5a4b74a4",
+      "bytes": 20613
+    },
+    {
+      "path": "checks/build_dictionary.py",
+      "sha256": "5c0f134819853304b0a593775f6157a254fd23957c7993834e83b1e706ee0677",
+      "bytes": 8638
+    },
+    {
+      "path": "checks/business_data_checks.py",
+      "sha256": "9e23f377cd60e666ddad7fe455ea078b324831e079576966dcd438851ea789d1",
+      "bytes": 7399
+    },
+    {
+      "path": "checks/capture_data.py",
+      "sha256": "428f4fdbfffc9624c949b8a6a3a5d587f863a61c180c80bf339869bd59125e80",
+      "bytes": 4343
+    },
+    {
+      "path": "checks/confirm_issue_rollup.py",
+      "sha256": "a6ad61ad5b0b24e7ff05495c8087faa5c400003fb468250089e4e04c872ba0b0",
+      "bytes": 1323
+    },
+    {
+      "path": "checks/confirm_progress.py",
+      "sha256": "c92299ed715fed8251ac733cafbb94d772bda1c0fd5a62d1b0b449773827cecb",
+      "bytes": 1553
+    },
+    {
+      "path": "checks/interface_audit.py",
+      "sha256": "0f0ca120261f8ac2a6bc80279a18952c369d79e9d1b7d905e9e80416ed2ebcdf",
+      "bytes": 9152
+    },
+    {
+      "path": "checks/interface_metrics.py",
+      "sha256": "5c53069d4005445ec550b8fcde9228ac3ca86f8b1307ef2b0c888f0586eba165",
+      "bytes": 3511
+    },
+    {
+      "path": "checks/interface_report_appendix.py",
+      "sha256": "60e4332f53b50c5acbbfb81b82075c2810de53eb269137c1f11fc1c3fa017930",
+      "bytes": 7763
+    },
+    {
+      "path": "checks/profile_data.py",
+      "sha256": "1b7f4d70127f5ceab6c97001f7f5d6a5f3b08e014de3b6bf16845d37c150197d",
+      "bytes": 12939
+    },
+    {
+      "path": "checks/verify_package.py",
+      "sha256": "4483051487cece4e9edf261fa8d888fa107557f1a8f591a7612df337db56a4e1",
+      "bytes": 2687
+    },
+    {
+      "path": "README.md",
+      "sha256": "729b4699dd3853032c0ebbc49f581bd843ccff6b5ede01bf39044923bdcbb5ae",
+      "bytes": 12001
+    },
+    {
+      "path": "reports/01-data-audit.md",
+      "sha256": "bc2397d5196f4fcc684bdc87e4188bd04fe1e701917503842473c9a1cd8f1c0b",
+      "bytes": 22173
+    },
+    {
+      "path": "reports/02-automation-audit.md",
+      "sha256": "743dfc0c3a2bfa58e6f97741cbf1c9e3a9e342bdd477836767e2df1d72db19b2",
+      "bytes": 26690
+    },
+    {
+      "path": "reports/02-automation-ledger.md",
+      "sha256": "11c172a6d9566d69c3b2130b952084b672ea7c3562fcad544b38a1960722c03a",
+      "bytes": 12951
+    },
+    {
+      "path": "reports/03-interface-audit.md",
+      "sha256": "c3d5a48c9496dc29ce0172237893e67432b732b08ea059c1589d26b547f84677",
+      "bytes": 33130
+    },
+    {
+      "path": "reports/04-handover.md",
+      "sha256": "83216dbf40dd83e706b5a9aa63fbbc17b19f033d20fe637338f1a466cab1e6d7",
+      "bytes": 14064
+    },
+    {
+      "path": "reports/05-field-dictionary.md",
+      "sha256": "dec877e1cb7df8a660e5665e6070abd98eb4bfa8e23ce3a9747a6df2fd6059c5",
+      "bytes": 95179
+    },
+    {
+      "path": "reports/06-formulas.md",
+      "sha256": "50324ff98d9d9c78b95a6b1168df8e53300d8e16717cf85c9ac65525f3d6f0d4",
+      "bytes": 5585
+    },
+    {
+      "path": "reports/07-table-relationships.mmd",
+      "sha256": "2a1b2dae60aa0a04075e0670c92e3a128ae26d7471380582b6d1fa719cb5a37e",
+      "bytes": 3725
+    },
+    {
+      "path": "reports/08-field-automation-interface-map.md",
+      "sha256": "752f47bfa5ddceb28806d2d6d3c743f54c1a26516e96283f6540c625270f4995",
+      "bytes": 80689
+    }
+  ]
+}
